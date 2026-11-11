@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hi-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radha, 2 mahine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff0f4;--bg2:#ffd0de;--fg:#4a1130;--mut:#8a3d5f;--acc:#c2185b;--star:#e8325f;--dim:#f6bccb;--on:#fff0f4;--petal:#f06292;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2b0a1c;--bg2:#4d1233;--fg:#ffe9ef;--mut:#e7b3c6;--acc:#ff8fb1;--star:#ff5c8a;--dim:#6a2a4a;--on:#2b0a1c;--petal:#ff8fb1}}
+:root[data-theme="dark"]{--bg1:#2b0a1c;--bg2:#4d1233;--fg:#ffe9ef;--mut:#e7b3c6;--acc:#ff8fb1;--star:#ff5c8a;--dim:#6a2a4a;--on:#2b0a1c;--petal:#ff8fb1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg2) linear-gradient(180deg,var(--bg1),var(--bg2)) no-repeat;color:var(--fg);font-family:'Mulish',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1.1rem;line-height:1.85;overflow-x:hidden}
+.disp{font-family:'Bodoni Moda',Georgia,'Times New Roman',serif;font-style:italic;font-weight:500}
+header{min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.25rem 2rem}
+h1{margin:0;font-size:clamp(4.2rem,22vw,8.5rem);line-height:1;color:var(--acc)}
+.sub{margin:.8rem 0 0;font-size:1.3rem;color:var(--fg)}
+.date{margin:.2rem 0 0;color:var(--mut);font-size:.95rem}
+.sky{display:grid;grid-template-columns:repeat(10,1fr);gap:.55rem;width:100%;max-width:21rem;margin:2.6rem auto 0}
+.sky i{font-style:normal;font-size:1.15rem;line-height:1;text-align:center;color:var(--dim);animation:on .5s forwards;animation-delay:calc(var(--i)*65ms + 700ms)}
+@keyframes on{to{color:var(--star);text-shadow:0 0 10px var(--star);transform:scale(1.15)}}
+.petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.petal{position:absolute;top:-2rem;background:var(--petal);border-radius:100% 0 100% 0;opacity:.5;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),115vh) rotate(var(--r))}}
+.cap{max-width:21rem;margin:1.4rem auto 0;color:var(--mut);font-size:1rem;line-height:1.6}
+main{max-width:34rem;margin:0 auto;padding:2rem 1.5rem 3rem}
+main p{margin:0 0 1.7rem}
+.big{font-size:clamp(1.8rem,7vw,2.5rem);line-height:1.25;color:var(--acc);margin:2.4rem 0 1.4rem}
+.ask{text-align:center;margin-top:3rem}
+button{font:inherit;font-weight:600;background:var(--acc);color:var(--on);border:0;border-radius:2rem;padding:.9rem 2rem;cursor:pointer;transition:transform .15s}
+button:hover{transform:scale(1.04)}
+button:focus-visible{outline:3px solid var(--star);outline-offset:3px}
+#last{max-width:34rem;margin:0 auto;padding:1rem 1.5rem 5rem;text-align:center;opacity:0;transform:translateY(12px);transition:opacity 1.2s,transform 1.2s}
+#last.show{opacity:1;transform:none}
+#last .big{margin-top:0}
+.sign{font-size:1.6rem;color:var(--fg);margin-top:2rem}
+.h{position:fixed;bottom:-2rem;color:var(--acc);font-size:1.6rem;pointer-events:none;animation:up 3s ease-in forwards}
+@keyframes up{to{transform:translateY(-110vh) translateX(var(--x));opacity:0}}
+@media (prefers-reduced-motion:reduce){.sky i{animation:none;color:var(--star)}#last{transition:none}.h,.petals{display:none}}
+</style>
+</head>
+<body>
+<div class="petals" id="petals" aria-hidden="true"></div>
+<header>
+  <h1 class="disp">Radha</h1>
+  <p class="sub">aaj hum 2 mahine ke ho gaye.</p>
+  <p class="date">11 November 2026</p>
+  <div class="sky" id="sky" aria-hidden="true"></div>
+  <p class="cap">60 din. Har din ek dhadkan, aur har dhadkan tumhare naam.</p>
+</header>
+
+<main>
+  <p>Pata hai Radha, 2 mahine pehle mujhe andaza bhi nahi tha ki ek insaan se milkar zindagi itni halki, itni khoobsurat lag sakti hai.</p>
+  <p>Ab mera din tumhare khayal se shuru hota hai aur raat tumhari awaaz par khatam. Beech ka sab kuch bas tumse dobara baat karne ka intezaar hai.</p>
+  <p class="big disp">Pyaar shor nahi karta.</p>
+  <p>Tumne mujhe yehi sikhaya. Pyaar tumhare “kha liya?” poochne mein hota hai, tumhari chhoti si muskaan mein, aur us sukoon mein jo sirf tumhare paas milta hai.</p>
+  <p>Main bade-bade waade nahi karunga. Bas itna kehta hoon: jab tak main hoon, tum akeli nahi ho. Tumhari khushi meri sabse badi kamyabi hai, aur tumhara saath meri sabse badi dua.</p>
+  <p>Ye sirf 2 mahine hain, par mujhe aisa lagta hai jaise tum hamesha se meri kahani ka hissa thi. Aur sach kahoon to ye kahani abhi shuru hui hai.</p>
+  <div class="ask"><button id="b" type="button">Ek aakhri baat sunogi?</button></div>
+</main>
+
+<section id="last" hidden>
+  <p class="big disp">Main tumse bahut pyaar karta hoon, Radha.</p>
+  <p>Kal bhi, aaj bhi, aur jab tak ye dil dhadakta hai.</p>
+  <p>Happy 2 Months, meri jaan.</p>
+  <p class="sign disp">Hamesha sirf tumhara</p>
+</section>
+
+<script>
+var sky=document.getElementById('sky');
+for(var i=1;i<=60;i++){var d=document.createElement('i');d.textContent='\u2665';d.style.setProperty('--i',i);sky.appendChild(d);}
+var last=document.getElementById('last');
+document.getElementById('b').addEventListener('click',function(){
+  this.parentNode.style.display='none';
+  last.hidden=false;
+  requestAnimationFrame(function(){requestAnimationFrame(function(){last.classList.add('show');});});
+  last.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  for(var n=0;n<16;n++){(function(n){setTimeout(function(){
+    var h=document.createElement('span');h.className='h';h.textContent='\u2665';
+    h.style.left=(Math.random()*92+2)+'%';h.style.setProperty('--x',(Math.random()*60-30)+'px');
+    h.style.fontSize=(1+Math.random()*1.4)+'rem';
+    document.body.appendChild(h);setTimeout(function(){h.remove();},3200);
+  },n*180);})(n);}
+});
+if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){var P=document.getElementById('petals');for(var k=0;k<14;k++){var p=document.createElement('span');p.className='petal';var s=(0.6+Math.random()*0.7)+'rem';p.style.width=s;p.style.height=s;p.style.left=(Math.random()*100)+'%';p.style.animationDuration=(10+Math.random()*9)+'s';p.style.animationDelay=(-Math.random()*16)+'s';p.style.setProperty('--dx',(Math.random()*120-60)+'px');p.style.setProperty('--r',(180+Math.random()*360)+'deg');P.appendChild(p);}}
+</script>
+</body>
+</html>
